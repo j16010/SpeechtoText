@@ -15,11 +15,15 @@ public class SpeechtoText_main {
 		// TODO 自動生成されたメソッド・スタブ
 		public static void main(String[] args) {
 		    SpeechToText service = new SpeechToText();
-		    service.setUsernameAndPassword("j16010", "j16010");
+		    service.setUsernameAndPassword("J16010", "J16010");
+		    
+		  
 		    
 		    File audio = new File("./audio/output.wav");
 		    RecognizeOptions options = null;
-			try {
+			
+		    
+		    try {
 				options = new RecognizeOptions.Builder()
 					.model("ja-JP_BroadbandModel")
 					.audio(audio)
@@ -31,6 +35,7 @@ public class SpeechtoText_main {
 			}
 		    SpeechRecognitionResults transcript = service.recognize(options).execute();
 		    
+		    //String s=String.valueOf(transcript);
 		    ObjectMapper mapper = new ObjectMapper();
 			
 			JsonNode node = null;
@@ -47,8 +52,11 @@ public class SpeechtoText_main {
 			
 			
 			double confidence= node.get("results").get(0).get("alternatives").get(0).get("confidence").asDouble();
-			System.out.println("results: "+confidence);
-
+			System.out.println("confidence: "+confidence);
+			
+			
+			 MySQL mysql=new MySQL();//6月7日
+			  mysql.updateImage(result, confidence);
 	}
 
 }

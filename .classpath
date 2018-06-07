@@ -6,5 +6,7 @@
 	<classpathentry kind="lib" path="C:/Users/shimizuatuya/Downloads/jackson-annotations-2.9.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/shimizuatuya/Downloads/jackson-databind-2.9.5.jar"/>
 	<classpathentry kind="lib" path="C:/Users/shimizuatuya/Downloads/jackson-core-2.9.5.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shimizuatuya/Desktop/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46-bin.jar"/>
+	<classpathentry kind="lib" path="C:/Users/shimizuatuya/Desktop/mysql-connector-java-5.1.46/mysql-connector-java-5.1.46.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
